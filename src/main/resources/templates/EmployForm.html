@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang ="t" xmlns="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>EmpDetails</title>
+</head>
+<body>
+<h1>Employ Details </h1>
+<form t:action="/addData" t:object=${Employee} method="post">
+<h2>
+<label for="inputfirst_name" >First Name : </label>
+<input type="text" t:field:"*{firstname}" class="form-control" id="first_name"
+placeholder="First Name" required autofocus>&ensp;
+<span th:if="${#fields.hasErrors('first_name')}" th:errors="*{first_name}"></span>
+<label for="inputlast_name">Last name : </label>
+<input type="text" t:field:"*{lastname}" class="form-control" id="last_name"
+placeholder="Last Name" required autofocus="autofocus">&ensp;
+<span th:if="${#fields.hasErrors('last_name')}" th:errors="*{last_name}"></span>
+<br>
+
+<label for="inputBirthdate">Date of Birth: </label>
+<input type="Birth_date" t:field:"*{Birth_date}" class="form-control" id="Birth_date"
+placeholder="dd/mm/yyyy" required autofocus="autofocus">
+<span th:if="${#fields.hasErrors('inputBirthdate')}" th:errors="*{inputBirthdate}"></span>
+</input>
+<br>
+<label for="inputEmpl_ID">EmployeeID: </label>
+<input type="employeeID" t:field:"*{EmployeeID}" class="form-control" id="employeeID"
+placeholder="Empl_ID" required autofocus="autofocus"/>
+<br>
+<div class="form-control-feedback">
+<span t:if="${#fields.haserrors('employeeID')}" t:error="*{employeeID}" Message>
+</span>
+</div>
+<label for="inputStartdate">Starting date : </label>
+<input type="start_date" t:field:"*{start_date}" class="form-control" id="start_date"
+placeholder="dd/mm/yyyy" required autofocus="autofocus">&ensp;
+
+<label for="inputEnddate">Ending date : </label>
+<input type="End_date" t:field:"*{End_date}" class="form-control" id="End_date"
+placeholder="dd/mm/yyyy" required autofocus="autofocus">&ensp;
+</input>
+
+<br>
+<label for="inputgender">Gender: </label>
+<select t:field="*{gender}">
+    <option t:value="'Male'" th:text="Male"></option>
+    <option t:value="'Female'" th:text="Female"></option>
+</select>
+<label for="inputbloodgroup">bloodGroup: </label>
+<select t:field="*{bloodgroup}">
+    <option t:value="'A'" th:text="A"></option>
+    <option t:value="'B'" th:text="B"></option>
+    <option t:value="'A+'" th:text="B"></option>
+    <option t:value="'B+'" th:text="B"></option>
+    <option t:value="'O'" th:text="B"></option>
+    <option t:value="'AB'" th:text="B"></option>
+</select>
+<br>
+
+<h1>Education</h1>
+<h2>
+<label for="inputtype">Type: </label>
+<select t:field="*{type}">
+    <option t:value="'B.E'" th:text="B.E"></option>
+    <option t:value="'B.Com'" th:text="B.Com"></option>
+    <option t:value="'MCA'" th:text="MCA"></option>
+    <option t:value="'BBA'" th:text="BBA"></option>
+    <option t:value="'B.Sc'" th:text="B.Sc"></option>
+</select>
+<br>
+<label for="inputStartdate">Starting date : </label>
+<input type="start_date" t:field:"*{start_date}" class="form-control" id="start_date"
+placeholder="dd/mm/yyyy" required autofocus="autofocus">&ensp;
+
+<label for="inputEnddate">Ending date : </label>
+<input type="End_date" t:field:"*{End_date}" class="form-control" id="End_date"
+placeholder="dd/mm/yyyy" required autofocus="autofocus">&ensp;
+</input>
+<br>
+<label for="inputUniversity">Institution: </label>
+<input type="Institution" t:field:"*{Institution}" class="form-control" id="Institution"
+placeholder="Institution" required autofocus="autofocus"/>&ensp;
+<h3>College Address</h3>
+<label for="inputStreet">Street :</label>
+<input type="Street" t:field:"*{Street}" class="form-control" id="Street"
+placeholder="Street" required autofocus="autofocus"/>&ensp;
+<label for="inputHomeNum">H'Num : </label>
+<input type="HomeNum" t:field:"*{Homenum}" class="form-control" id="HomeNum"
+placeholder="HomeNum" required autofocus="autofocus"/>&ensp;
+<label for="inputCity">City : </label>
+<input type="City" t:field:"*{City}" class="form-control" id="City"
+placeholder="City" required autofocus="autofocus"/>&ensp;
+<label for="inputpincode">Pincode : </label>
+<input type="pincode" t:field:"*{pincode}" class="form-control" id="pincode"
+placeholder="pincode" required autofocus="autofocus"/>&ensp;
+<label for="inputState">State : </label>
+<input type="State" t:field:"*{State}" class="form-control" id="State"
+placeholder="State" required autofocus="autofocus"/>&ensp;
+</h2>
+<br>
+<h1>Family</h1>
+<label for="inputrelation">Relation: </label>
+<select t:field="*{relation}">
+    <option t:value="'Mother'" th:text="Mother"></option>
+    <option t:value="'Father'" th:text="Father"></option>
+    <option t:value="'Wife'" th:text="Wife"></option>
+    <option t:value="'Son'" th:text="Son"></option>
+    <option t:value="'Daughter'" th:text="Daughter"></option>
+</select>&ensp;
+<label for="inputfirtname" >First Name : </label>
+<input type="text" t:field:"*{firstname}" class="form-control" id="firstname"
+placeholder="First Name" required autofocus>&ensp;
+<label for="inputlastname">Last name : </label>
+<input type="text" t:field:"*{lastname}" class="form-control" id="lastname"
+placeholder="Last Name" required autofocus="autofocus">&ensp;
+<label for="inputBirthdate">Date of Birth: </label>
+<input type="dBirth_date" t:field:"*{dBirth_date}" class="form-control" id="dBirth_date"
+placeholder="dd/mm/yyyy" required autofocus="autofocus">&ensp;
+<label for="inputgender">Gender: </label>
+<select t:field="*{gender}">
+    <option t:value="'Male'" th:text="Male"></option>
+    <option t:value="'Female'" th:text="Female"></option>
+</select>&ensp;
+</input>
+<br>
+<button type="Submit">Add</button>
+</h2>
+</form>
+</body>
+</html>
